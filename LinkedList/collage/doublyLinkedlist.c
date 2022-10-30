@@ -69,14 +69,47 @@ void print(struct node* h){
 		t=t->next;
 	}
 }
+struct node* delete(struct node* h){
+	struct node* temp=h,*q;
+	int pos,c=1;
+	printf(" \nenter the pos: ");
+	scanf("%d",&pos);
+	if(pos==1){
+		h=temp->next;
+		temp->next =NULL;
+		free(temp);
+	}
+	else{
+		while (pos<c-1)
+		{
+			temp =temp->next;
+			c++; 
+		}
+		q=temp->next;
+		if(q->next==NULL){
+			temp->next =NULL;
+			q->prev =NULL;
+			free(q);
+		}
+		else{
+			temp->next = q->next;
+			q->next->prev =temp;
+			q->next =NULL;
+			q->prev =NULL;
+			free(q);
+		}
+	}
+	return h;
+}
 int main(){
 	int choice;
 	struct node* h=NULL;
 	while(1){
-		printf("\nenter 1 to create:");
-		printf("\nenter 2 to print:");
-		printf("\nenter 3 to insert:");
-		printf("\nenter 4 to exit:");
+		printf("\nenter 1 to create: ");
+		printf("\nenter 2 to print: ");
+		printf("\nenter 3 to insert: ");
+		printf("\nenter 4 to delete: ");
+		printf("\nenter 5 to exit: ");
 		scanf("%d", &choice);
 		switch(choice){
 			case 1:
@@ -87,8 +120,11 @@ int main(){
 				break;
 			case 3:
 				h=insert(h);
-				break;			
+				break;	
 			case 4:
+				h= delete(h);
+				break;		
+			case 5:
 				exit(0);
 		}
 	}

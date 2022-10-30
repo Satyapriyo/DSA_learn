@@ -1,7 +1,6 @@
 /* C program for Merge Sort */
 #include <stdio.h>
 #include <stdlib.h>
-
 // Merges two subarrays of arr[].
 // First subarray is arr[l..m]
 // Second subarray is arr[m+1..r]
@@ -65,7 +64,6 @@ void mergeSort(int arr[], int l, int r)
 		// Sort first and second halves
 		mergeSort(arr, l, m);
 		mergeSort(arr, m + 1, r);
-
 		merge(arr, l, m, r);
 	}
 }

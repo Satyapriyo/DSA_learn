@@ -30,7 +30,6 @@ char pop(){
 void push(char oper){
     if(isFull())
         printf("Stack Full!!!!");
-   
     else{
         top++;
         stk[top] = oper;
@@ -98,7 +97,6 @@ int covertInfixToPostfix(char* expression)
         } 
 
     } 
-
     // Once all inital expression characters are traversed
     // adding all left elements from stack to exp
     while (!isEmpty()) 
@@ -107,7 +105,6 @@ int covertInfixToPostfix(char* expression)
     expression[++j] = '\0'; 
     printf( "%s", expression); 
 } 
-
 int main()
 { 
 // char expression[] = "((a+(b*c))-d)";
