@@ -19,5 +19,8 @@
     "titleBar.inactiveBackground": "#7c24fa99",
     "titleBar.inactiveForeground": "#e7e7e799"
   },
-  "peacock.color": "#7c24fa"
+  "peacock.color": "#7c24fa",
+  "files.associations": {
+    "limits.h": "c"
+  }
 }

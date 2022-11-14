@@ -34,6 +34,7 @@ void merge(int arr[], int l, int m, int r)
 		}
 		k++;
 	}
+
 	/* Copy the remaining elements of L[], if there
 	are any */
 	while (i < n1) {
@@ -50,7 +51,7 @@ void merge(int arr[], int l, int m, int r)
 		k++;
 	}
 }
-\
+
 /* l is for left index and r is right index of the
 sub-array of arr to be sorted */
 void mergeSort(int arr[], int l, int r)
